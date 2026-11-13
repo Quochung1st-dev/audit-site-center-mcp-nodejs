@@ -1,7 +1,7 @@
 {
-  "name": "audit-site-center-mcp",
+  "name": "audit-site-center-mcp-server",
   "version": "0.1.0",
-  "description": "MCP server cho AuditSite Center",
+  "description": "MCP server cho AuditSite Center (Node.js/TypeScript)",
   "private": false,
   "type": "module",
   "main": "dist/index.js",
