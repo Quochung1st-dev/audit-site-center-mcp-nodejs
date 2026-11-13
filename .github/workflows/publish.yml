@@ -3,16 +3,15 @@ name: Publish to npm
 on:
   push:
     tags:
-      - 'v*'  # Kích hoạt khi push tag v*, ví dụ: v0.1.0, v1.0.0
-
-  workflow_dispatch:  # Cho phép chạy thủ công
+      - 'v*'
+  workflow_dispatch:
 
 jobs:
   publish:
     name: Publish to npm
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write  # Cần cho tạo release
       id-token: write  # Cần cho npm provenance (OIDC)
 
     steps:
@@ -50,3 +49,5 @@ jobs:
           generate_release_notes: true
           draft: false
           prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
