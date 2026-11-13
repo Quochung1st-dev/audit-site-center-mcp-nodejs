@@ -1,0 +1,53 @@
+{
+  "name": "audit-site-center-mcp",
+  "version": "0.1.0",
+  "description": "MCP server cho AuditSite Center",
+  "private": false,
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "audit-site-center-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --platform=node --target=node20 --format=esm --outfile=dist/index.js --packages=external",
+    "typecheck": "tsc --noEmit",
+    "start": "node dist/index.js",
+    "dev": "tsx watch src/index.ts",
+    "test": "node --import tsx --test \"test/**/*.test.ts\"",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "esbuild": "^0.25.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "audit",
+    "audit-site",
+    "seo",
+    "laravel"
+  ],
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/<owner>/<repo>.git"
+  },
+  "bugs": {
+    "url": "https://github.com/<owner>/<repo>/issues"
+  },
+  "homepage": "https://github.com/<owner>/<repo>#readme"
+}
