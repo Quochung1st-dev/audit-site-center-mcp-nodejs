@@ -44,10 +44,10 @@
   "license": "UNLICENSED",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/<owner>/<repo>.git"
+    "url": "git+https://github.com/Quochung1st-dev/audit-site-center-mcp-nodejs.git"
   },
   "bugs": {
-    "url": "https://github.com/<owner>/<repo>/issues"
+    "url": "https://github.com/Quochung1st-dev/audit-site-center-mcp-nodejs/issues"
   },
-  "homepage": "https://github.com/<owner>/<repo>#readme"
+  "homepage": "https://github.com/Quochung1st-dev/audit-site-center-mcp-nodejs#readme"
 }
