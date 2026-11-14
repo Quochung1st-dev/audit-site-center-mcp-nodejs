@@ -51,7 +51,28 @@ cp .env.example .env
 
 ## Sử dụng với MCP Client
 
-Khai báo trong `.mcp.json` hoặc cấu hình Claude Desktop:
+### Cách 1: Dùng `npx` (khuyến nghị, từ npm)
+
+Khai báo trong `.mcp.json` hoặc cấu hình Claude Desktop/Cursor:
+
+```json
+{
+  "mcpServers": {
+    "audit-site-center": {
+      "command": "npx",
+      "args": ["-y", "audit-site-center-mcp-server@latest"],
+      "env": {
+        "AUDIT_SITE_API_URL": "http://localhost:8000",
+        "AUDIT_SITE_API_TOKEN": "token_của_bạn"
+      }
+    }
+  }
+}
+```
+
+> Package npm: [`audit-site-center-mcp-server`](https://www.npmjs.com/package/audit-site-center-mcp-server)
+
+### Cách 2: Chạy local (từ source/build)
 
 ```json
 {
